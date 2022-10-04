@@ -1,0 +1,25 @@
+body{
+    font-family: "Courier New", sans-serif;
+    font-size: large;
+    padding: 20px;
+    color: white;
+    background: darkslategray;
+}
+h1{
+    color: cornflowerblue;
+    text-align: center;
+}
+
+#happy-div img, #sad-div img{
+    max-height: 360px;
+    width: auto;
+}
+
+#happy-div{
+    float: left;
+    margin-right: 40px ;
+}
+
+.title-headings{
+    color: lightskyblue;
+}
