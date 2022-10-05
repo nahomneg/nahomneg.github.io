@@ -1,0 +1,68 @@
+body{
+    color:#404040;
+    font-family: Georgia, Garamond, serif;
+}
+h1,h2,h3,h4,h5,h6{
+    color: #A4A400;
+    background: #F0F0F0 ;
+    font-family: "Lucida Sans Unicode", "Helvetica", Arial, sans-serif;
+    text-decoration: underline;
+    font-size:18pt;
+
+}
+h1{
+    text-align: center;
+    font-size:  22pt;
+}
+a{
+    color:#A4A400;
+    display: block;
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tbsp-tooltip {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tbsp-tooltip {
+    visibility: visible;
+}
+
+.tooltip .tsp-tooltip {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tsp-tooltip {
+    visibility: visible;
+}
+.out-dated-text{
+    text-decoration: line-through;
+}
+.comment{
+    background: #FFFFA8 ;
+    margin: 0 80px  ;
+}
