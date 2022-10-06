@@ -25,12 +25,12 @@ header img{
     width:100%;
 }
 #right-section{
-    width: 30%;
+    width: 23%;
     float: right;
     background: yellowgreen;
 }
 #main-div{
-    border: 3px solid #aaa;
+    /*border: 3px solid #aaa;*/
     width: 65%;
     margin:auto;
 }
