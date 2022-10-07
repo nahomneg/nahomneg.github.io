@@ -1,0 +1,47 @@
+header, footer{
+    background:cornflowerblue;
+    padding: 20px;
+}
+h1{
+    margin:0;
+    text-align: center;
+}
+body{
+    margin: 0;
+    color: white !important;
+    font-family: Tahoma, serif;
+}
+p{
+    margin:0;
+}
+section{
+    height: 600px;
+}
+nav{
+    background: darkolivegreen;
+    margin: 0;
+    padding: 0;
+}
+ nav ul{
+     padding: 0;
+     margin: 0;
+
+ }
+ nav ul li{
+     padding: 20px;
+ }
+
+ #col-one{
+     background: #404045;
+     padding: 30px;
+
+ }
+#col-three{
+     background: black;
+    padding: 30px;
+
+}
+#col-two{
+     background: darkblue;
+    padding: 30px;
+}
