@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+    <head>
+        <title>W2D1 Quiz</title>
+        <meta charset="utf-8">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
+        <script>
+            // initialize mocha
+            mocha.setup('bdd');
+            // chai has a lot of stuff, let's make assert global
+            let assert = chai.assert;
+
+        </script>
+
+        <script>
+            // write your code for the function earliestSpace() here
+            // remember it has to take 3 strings, not an array!
+            function earliestSpace(str1, str2, str3){
+                let minIndex = Number.MAX_VALUE;
+                let currentWinner = str1;
+                let i = 0;
+                for (let i = 0; i< str1.length; i++){
+                    if (str1[i] == ' ' && i < minIndex){
+                        minIndex = i;
+                        currentWinner = str1;
+
+                    }
+                }
+                for (let i = 0; i< str2.length; i++){
+                    if (str2[i] == ' ' && i < minIndex){
+                        minIndex = i;
+                        currentWinner = str2;
+                    }
+                }
+                for (let i = 0; i< str3.length; i++){
+                    if (str3[i] == ' ' && i < minIndex){
+                        minIndex = i;
+                        currentWinner = str3;
+                    }
+                }
+                return currentWinner;
+
+            }
+
+            function multiply(nums){
+                return nums.reduce((accumilator,num)=>num * accumilator,1)
+            }
+            function sum(nums){
+                return nums.reduce((accumilator,num)=>num + accumilator,0)
+            }
+            function reverse(word){
+                return word.split('').map((elem, i, array)=> {
+                    return array[array.length - i -1];
+                }).join('');
+            }
+            function filterLongWords(words, i){
+                return words.filter((elem)=> elem.length > i );
+            }
+        </script>
+        <script>
+            describe("earliestSpace", function () {
+                it("takes 3 strings, and returns whicherver string has a space character at the lowest index",
+                    function () {
+                        assert.equal("bla bla bla", earliestSpace("This is a test", "Where it checks for spaces",
+                            "bla bla bla"));
+                    });
+            });
+            describe("multiply", function () {
+                it("Takes an array of numbers and muliply them",
+                    function () {
+                        assert.equal(12, multiply([1,3,4]));
+                    });
+            });
+            describe("sum", function () {
+                it("takes an array of numbers and adds them",
+                    function () {
+                        assert.equal(10,sum([1,2,3,4]));
+                    });
+            });
+            describe("filterLongWords", function () {
+                it("takes an array of strings and an integer and returns elements of array with length greater than integer",
+                    function () {
+                        assert.deepEqual(["Where it checks for spaces", "bla bla bla"], filterLongWords(["Thi", "Where it checks for spaces",
+                            "bla bla bla"], 5));
+                    });
+            });
+            describe("reverse", function () {
+                it("takes a string and reverse it",
+                    function () {
+                        assert.deepEqual("olleh", reverse("hello"));
+                    });
+            });
+
+        </script>
+    </head>
+
+    <body>
+    <div id="mocha"></div>
+    <script>
+        mocha.run();
+
+    </script>
+    </body>
+
+</html>
