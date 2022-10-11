@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forms</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        body{
+
+            margin:0;
+            font-family: "Courier New",sans-serif;
+        }
+        form{
+            box-shadow: 2px 3px 2px #eaeaea;
+            padding: 20px;
+            border: 4px solid #eaeaea;
+        }
+        header{
+            background: cornflowerblue;
+            display: flex;
+            padding: 15px;
+            font-size: 20px;
+            color:white;
+            justify-content: space-around;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <p>Market Place:::: SRM SYSTEM</p>
+    <p>Products</p>
+    <p>Suppliers</p>
+</header>
+<h1>New Product Form</h1>
+
+<form class="row g-3">
+    <div class="col-md-6">
+        <label for="productNumber" class="form-label">Product Number</label>
+        <input type="text" class="form-control" id="productNumber">
+    </div>
+    <div class="col-md-6">
+        <label for="quantity" class="form-label">Quantity In Stock</label>
+        <input type="number" value="0" class="form-control" id="quantity">
+    </div>
+    <div class="col-md-6">
+        <label for="inputAddress" class="form-label">Name</label>
+        <input type="text" class="form-control" id="inputAddress" >
+    </div>
+
+
+    <div class="col-md-6">
+        <label for="inputState" class="form-label">Supplier</label>
+        <select id="inputState" class="form-control">
+            <option selected>Select a Supplier</option>
+            <option>Supplier 1</option>
+            <option>Supplier 2</option>
+            <option>Supplier 3</option>
+        </select>
+    </div>
+    <div class="col-md-6">
+        <label for="quantity" class="form-label">Unit Price</label>
+        <input type="number" value="0.0" class="form-control" id="unitprice">
+    </div>
+    <div class="col-md-6">
+        <label for="date" class="form-label">Date</label>
+        <input type="date" value="0.0" class="form-control" id="date">
+    </div>
+
+
+    <div class="col-md-3 col-md-push-9">
+        <button type="reset" class="btn btn-light">Reset</button>
+        <button type="button" class="btn btn-light">Cancel</button>
+
+        <button type="button" class="btn btn-light">Add Product</button>
+    </div>
+</form>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+</html>
