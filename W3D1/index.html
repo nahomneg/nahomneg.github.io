@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bank Accounts</title>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
+    <script>
+        // initialize mocha
+        mocha.setup('bdd');
+        // chai has a lot of stuff, let's make assert global
+        let assert = chai.assert;
+    </script>
+    <script>
+        function toBeTested(){
+            let account = new Account(54);
+            let savings = new SavingsAccount(35);
+            console.log(account.toString());
+            console.log(savings.toString());
+
+        }
+    </script>
+    <script>
+        describe("earliestSpace", function () {
+            it("takes 3 strings, and returns whicherver string has a space character at the lowest index",
+                function () {
+                    assert.equal("bla bla bla", toBeTested("This is a test", "Where it checks for spaces",
+                        "bla bla bla"));
+                });
+        });
+
+
+    </script>
+
+    <script src="account.js"></script>
+    <script src="savingsaccount.js"></script>
+    <script src="checkingaccount.js"></script>
+    <script src="bank.js"></script>
+    <script src="test.js"></script>
+</head>
+
+<body>
+<div id="mocha"></div>
+<script>
+    mocha.run();
+</script>
+</body>
+
+</html>
