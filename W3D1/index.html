@@ -14,27 +14,8 @@
         // chai has a lot of stuff, let's make assert global
         let assert = chai.assert;
     </script>
-    <script>
-        function toBeTested(){
-            let account = new Account(54);
-            let savings = new SavingsAccount(35);
-            console.log(account.toString());
-            console.log(savings.toString());
-
-        }
-    </script>
-    <script>
-        describe("earliestSpace", function () {
-            it("takes 3 strings, and returns whicherver string has a space character at the lowest index",
-                function () {
-                    let saving = new SavingsAccount(45,55);
-
-                    assert.equal("", saving.endOfMonth());
-                });
-        });
 
 
-    </script>
 
     <script src="account.js"></script>
     <script src="savingsAccount.js"></script>

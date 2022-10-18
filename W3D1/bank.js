@@ -22,13 +22,13 @@ class Bank {
     }
 
     closeAccount(accNumber){
-        this._accounts.filter((account) => account.getNumber() !== accNumber);
+        this._accounts = this._accounts.filter((account) => account.getNumber() !== accNumber);
     }
 
     accountReport(){
         let report = "";
         for (let account of this.accounts){
-            report += account.getNumber + "\n"
+            report += account.getNumber() + "\n"
         }
         return report;
     }
