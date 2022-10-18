@@ -27,8 +27,9 @@
         describe("earliestSpace", function () {
             it("takes 3 strings, and returns whicherver string has a space character at the lowest index",
                 function () {
-                    assert.equal("bla bla bla", toBeTested("This is a test", "Where it checks for spaces",
-                        "bla bla bla"));
+                    let saving = new SavingsAccount(45,55);
+
+                    assert.equal("", saving.endOfMonth());
                 });
         });
 
@@ -36,8 +37,8 @@
     </script>
 
     <script src="account.js"></script>
-    <script src="savingsaccount.js"></script>
-    <script src="checkingaccount.js"></script>
+    <script src="savingsAccount.js"></script>
+    <script src="checkingAccount.js"></script>
     <script src="bank.js"></script>
     <script src="test.js"></script>
 </head>

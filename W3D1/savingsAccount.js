@@ -1,5 +1,6 @@
+"use strict";
 class SavingsAccount extends Account{
-    _interest = 0;
+
     constructor(interest, accNumber) {
         super(accNumber);
         this.interest = interest;
@@ -12,8 +13,16 @@ class SavingsAccount extends Account{
     set interest(interest){
         this._interest = interest;
     }
+
+    addInterest(){
+        super.deposit(super.getBalance() + this.interest)
+    }
+
     toString() {
-        return "overridden " + super.toString();
+        return "Saving Account: " + super.toString();
+    }
+    endOfMonth() {
+        return "Interest added SavingsAccount "+ this.getNumber() +": balance: "+ this.getBalance() +" interest: " + this.interest;
     }
 
 }
