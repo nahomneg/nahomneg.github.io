@@ -39,5 +39,8 @@ $(function () {
         }
 
     });
+    const newElem = $("<p>", { "id": "myid", "class": "special", "text": "My paragraph is awesome!" });
+    $("#ul").append(newElem);
+    $("#ascii").after(newElem);
 
 })
