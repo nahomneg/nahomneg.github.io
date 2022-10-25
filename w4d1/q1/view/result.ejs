@@ -1,0 +1,18 @@
+<div>
+    <table>
+        <thead>
+            <th>Key</th>
+            <th>Value</th>
+        </thead>
+        <tbody>
+
+            <% for (const item in values) { %>
+            <tr>
+                <td class="item"><%= item %></td>
+                <td class="item"><%= values[item] %></td>
+            </tr>
+
+            <% } %>
+        </tbody>
+    </table>
+</div>
