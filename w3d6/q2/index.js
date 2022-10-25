@@ -9,8 +9,9 @@ app.set('views', path.join(__dirname, "view"));
 app.use(express.urlencoded({extended:false}));
 
 app.get('/', (req, res) => {
-   res.render("form")
+   res.render("main");
 });
+
 app.post('/result', (req, res) => {
     let name = req.body.name;
     let age = req.body.age;
