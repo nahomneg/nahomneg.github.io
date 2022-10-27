@@ -73,3 +73,31 @@ app.get("/cart", (req, res) => {
 app.listen(3000, (req, res) => {
   console.log("Listening at 3000");
 });
+
+
+app.get('/transport', function (req, res){
+  if(req.session.name){
+    res.send('Welcome ' + req.session.name);
+  }
+  else{
+    res.redirect(303, '/login')
+  }
+  res.send({"advantages":["healthy", "cheap", "always available"],
+    "disadvantages": ["slow", "boring", "tiring"] })
+});
+
+app.get('/login', function (req, res){
+  res.render('login');
+});
+
+app.get('/login', function (req, res){
+  if(req.body.name){
+    req.session['name'] = req.body.name;
+  }
+  else{
+    res.redirect()
+  }
+});
+
+
+/transport?type='Riding a bike'
